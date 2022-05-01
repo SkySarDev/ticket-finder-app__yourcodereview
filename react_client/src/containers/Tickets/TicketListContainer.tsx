@@ -8,7 +8,11 @@ import {
 } from "@store/reducers/tickets.reducers";
 import { selectCompanies } from "@store/reducers/companies.reducers";
 import { fetchTickets } from "@services/api/tickets.services";
-import { TicketList, TicketListMessage } from "@components/TicketsContent";
+import {
+  SkeletonTicketList,
+  TicketList,
+  TicketListMessage,
+} from "@components/TicketsContent";
 
 const TicketListContainer: FC = (): ReactElement => {
   const dispatch = useAppDispatch();
@@ -27,14 +31,10 @@ const TicketListContainer: FC = (): ReactElement => {
     <>
       {error ? (
         <TicketListMessage message={"Ошибка получения данных"} type={"error"} />
-      ) : tickets.length ? (
-        <TicketList
-          ticketList={tickets}
-          companyList={companies}
-          loading={loading || companiesLoading}
-        />
+      ) : loading || companiesLoading ? (
+        <SkeletonTicketList />
       ) : (
-        <TicketListMessage message={"Билеты не найдены"} />
+        <TicketList ticketList={tickets} companyList={companies} />
       )}
     </>
   );

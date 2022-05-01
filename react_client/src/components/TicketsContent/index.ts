@@ -4,6 +4,7 @@ import TicketSegmentItem from "./TicketSegmentItem/TicketSegmentItem";
 import TicketListMessage from "./TicketList/TicketListMessage";
 import TicketsPagination from "./TicketsPagination/TicketsPagination";
 import SkeletonTicketItem from "./TicketItem/SkeletonTicketItem";
+import SkeletonTicketList from "./TicketList/SkeletonTicketList";
 
 export {
   TicketList,
@@ -12,4 +13,5 @@ export {
   TicketListMessage,
   TicketsPagination,
   SkeletonTicketItem,
+  SkeletonTicketList,
 };
