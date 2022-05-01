@@ -1,4 +1,4 @@
 ### Тестовое задание
 ### Приложение поиска билетов
 
-Дэмо: https://ticket-finder-app.netlify.app
+Демо: https://ticket-finder-app.netlify.app
