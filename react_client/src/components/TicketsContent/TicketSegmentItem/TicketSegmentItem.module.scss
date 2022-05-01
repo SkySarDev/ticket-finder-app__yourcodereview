@@ -1,0 +1,26 @@
+.segment {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 20px;
+  align-items: center;
+
+  &:not(:last-child) {
+    margin-bottom: 10px;
+  }
+}
+
+.title {
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 18px;
+  letter-spacing: 0.5px;
+  color: #a0b0b9;
+  text-transform: uppercase;
+}
+
+.content {
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: 600;
+  color: #4a4a4a;
+}

@@ -1,0 +1,29 @@
+.inner {
+  padding: 20px;
+}
+
+.title {
+  font-size: 12px;
+  line-height: 12px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  text-align: center;
+  color: #4a4a4a;
+
+  @media (min-width: 425px) {
+    text-align: left;
+  }
+}
+
+.content {
+  margin-top: 10px;
+
+  @media (min-width: 425px) {
+    margin-top: 15px;
+  }
+
+  @media (min-width: 650px) {
+    margin-top: 20px;
+  }
+}

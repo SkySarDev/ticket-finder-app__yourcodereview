@@ -1,0 +1,17 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap");
+@import "app/styles/reset.css";
+
+body {
+  margin: 0;
+  font-family: "Open Sans", sans-serif;
+  font-size: 12px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #f3f7fa;
+  color: #4a4a4a;
+}
+
+#root {
+  display: flex;
+  justify-content: center;
+}

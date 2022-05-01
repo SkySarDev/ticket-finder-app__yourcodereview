@@ -1,0 +1,24 @@
+.list {
+  > div:not(:last-child) {
+    margin-bottom: 10px;
+
+    @media (min-width: 425px) {
+      margin-bottom: 15px;
+    }
+
+    @media (min-width: 768px) {
+      margin-bottom: 20px;
+    }
+  }
+}
+
+.listMessage {
+  padding: 20px;
+  font-size: 14px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.error {
+  color: red;
+}

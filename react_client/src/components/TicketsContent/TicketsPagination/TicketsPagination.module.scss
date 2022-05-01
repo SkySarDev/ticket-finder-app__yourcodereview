@@ -1,0 +1,27 @@
+.field {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 5px;
+}
+
+.pageBtn {
+  font-size: 13px;
+  padding: 3px 7px;
+  background-color: #fff;
+  border: 1px solid #dfe5ec;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: all 0.35s;
+
+  &:disabled {
+    background-color: #f1fcff;
+    border-color: #2196f3;
+    color: #2196f3;
+  }
+
+  &:hover:not(:disabled) {
+    color: #2196f3;
+    background-color: #f1fcff;
+  }
+}
