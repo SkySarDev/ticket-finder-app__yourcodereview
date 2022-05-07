@@ -1,7 +1,6 @@
 import { createAsyncThunk } from "@reduxjs/toolkit";
-import axios from "axios";
 
-import { API_URL } from "@helpers/constants/api.constants";
+import { api } from "@services/api/baseApi";
 
 interface FetchTicketsArguments {
   page: number;
@@ -15,9 +14,7 @@ export const fetchTickets = createAsyncThunk(
       const { page, search } = query;
       const searchParams = search ? search.slice(1, search.length) : "";
 
-      const response = await axios.get(
-        `${API_URL}/tickets?page=${page}&${searchParams}`
-      );
+      const response = await api.get(`/tickets?page=${page}&${searchParams}`);
       return response.data;
     } catch (err) {
       throw err;
