@@ -1,24 +1,11 @@
 import React, { FC, ReactElement, useEffect, useState } from "react";
 import { useSearchParams } from "react-router-dom";
 
+import { sortTypeList } from "@helpers/constants/lists.constants";
 import TicketSortsItem from "./TicketSortsItem/TicketSortsItem";
 import styles from "./TicketSortsBlock.module.scss";
 
 const TicketSortsBlock: FC = (): ReactElement => {
-  const sortTypeList = [
-    {
-      type: "cheaper",
-      title: "Самый дешевый",
-    },
-    {
-      type: "faster",
-      title: "Самый быстрый",
-    },
-    {
-      type: "optimal",
-      title: "Оптимальный",
-    },
-  ];
   const [sortType, setSortType] = useState("cheaper");
   const [searchParams, setSearchParams] = useSearchParams();
 
