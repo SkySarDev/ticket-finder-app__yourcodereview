@@ -15,6 +15,7 @@ const TicketCompaniesFilterItem: FC<Props> = ({
   onChangeFilter,
 }): ReactElement => {
   const { id, name } = filterItem;
+  const isChecked = id === selectedCompany;
 
   const onChangeHandler = () => {
     onChangeFilter(id);
@@ -25,7 +26,7 @@ const TicketCompaniesFilterItem: FC<Props> = ({
       <input
         type="radio"
         id={`company-filter-radio-${id}`}
-        checked={id === selectedCompany}
+        checked={isChecked}
         onChange={onChangeHandler}
       />
       <label htmlFor={`company-filter-radio-${id}`}>{name}</label>

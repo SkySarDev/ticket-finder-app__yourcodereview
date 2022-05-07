@@ -18,14 +18,16 @@ const TicketStopsFilter: FC = (): ReactElement => {
   }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
   const onFilterChange = (filter: string) => {
-    if (filter === "all") {
+    const allFilters = "all";
+
+    if (filter === allFilters) {
       searchParams.delete("stops");
       setStopsFilterList(getStopsFilter([]));
     } else {
       const stopsAmount: string[] = [];
 
       stopsFilterList.forEach(({ value, checked }) => {
-        if (value === "all") checked = false;
+        if (value === allFilters) checked = false;
         if (filter === value) checked = !checked;
         if (checked) stopsAmount.push(value);
       });
